@@ -14,12 +14,9 @@ As said in our introduction:
 > default, will read our code according to the rules of a **default sequence**:
 > "every line, top to bottom, left to right as ruled by order of operations."
 
-Using SELECTION statements we'll make Ruby "skip" over code if some Boolean
-_evaluation_ is (or is not) `true`. Using REPETITION statements, we'll make
-Ruby "stay put" on one line and do it over and over until some Boolean
-_evaluation_ is (or is not) `true`. The only way to make Ruby "not see" a line
-without a Boolean _evaluation_ at play is to "hide" it from Ruby using a
-_comment_.
+The only way to make Ruby "not see" a line in its default sequence is
+to "hide" it from Ruby using a _comment_. Comments allow us to document
+notes to ourselves, notes to other programmers, or hide buggy code from Ruby.
 
 Since this is our first lesson using the Learn In-Browser IDE, we'll step
 through the process of getting a code environment together.
@@ -33,7 +30,7 @@ through the process of getting a code environment together.
 Be sure to "play along" by keying in this code into your own file and running
 it. We need to build comfort with working along with the lessons.
 
-## Recognize the Comment Character
+## ![Sequence Glyph](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_mini.png) Recognize the Comment Character
 
 We can exclude a line from the **default sequence** by starting the line with
 the comment character: `#`. After Ruby sees a `#`, it will ignore from the `#`
@@ -42,11 +39,15 @@ to the next line.
 Be careful! A comment placed in the middle of an expression will confuse Ruby.
 
 ```ruby
-# Don't do this:
+# Don't do the next line: <== A legitimate comment, # at beginning, rest of line ignored
 puts ( 1 #+ 1)
 ```
 
-## Add a Comment to Code
+> **A-HA! Moment**. The "return value" documentation shorthand `#=>` starts
+> with a comment character. That means what's after `#` is ignored. That's why
+> it's used as an "in-code" documentation convention.
+
+## ![Sequence Glyph](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_mini.png) Add a Comment to Code
 
 Comments are **primarily** used to provide references or explanations about
 what's going on in code.
@@ -54,7 +55,7 @@ what's going on in code.
 ```ruby
 # Perform a constant expression evaluation
 3
-# Assign constant 3 to bare-word variable triangle_sides
+# Assign constant 3 to variable triangle_sides
 `triangle_sides`
 ```
 
@@ -70,11 +71,7 @@ puts "Joy to the fishes in the deep blue sea"
 puts "Joy to you and me"
 ```
 
-> **A-HA! Moment**. The "return value" documentation shorthand `#=>` starts
-> with a comment character. That means what's after `#` is ignored. That's why
-> it's used as an "in-code" documentation convention.
-
-## Comment-Out code
+## ![Sequence Glyph](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_mini.png) Comment-Out code
 
 Another way to use comments is to "comment-out" code, to "hide" or "mute" buggy
 or unused code from the **default sequence**.
@@ -111,10 +108,6 @@ Joy to the world
 All the boys and girls
 Joy to you and me
 ```
-
-As a rule of thumb, try to comment out from the beginning of the line to the
-end. As you get more comfortable with Ruby, you might find clever ways to use
-comments, but best keep things simple now.
 
 Here's a more complex example of us commenting out code.
 

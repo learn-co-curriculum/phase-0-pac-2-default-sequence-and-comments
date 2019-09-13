@@ -27,7 +27,7 @@ through the process of getting a code environment together.
 3. Run the Ruby code with `ruby learning-comments.rb`
 4. Edit the file and put in new examples as needed
 
-Be sure to "play along" by keying in this code into your own file and running
+Be sure to "play along" by keying in this code into your file and running
 it. We need to build comfort with working along with the lessons.
 
 ## ![Sequence Glyph](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_mini.png) Recognize the Comment Character
@@ -39,7 +39,7 @@ to the next line.
 Be careful! A comment placed in the middle of an expression will confuse Ruby.
 
 ```ruby
-# Don't do the next line: <== A legitimate comment, # at beginning, rest of line ignored
+# Don't do the next line: <== A legitimate comment, "#" at beginning, rest of line ignored
 puts ( 1 #+ 1)
 ```
 
@@ -60,11 +60,11 @@ what's going on in code.
 ```
 
 Comments such as these are not particularly helpful. They're just restating
-what the code does. More often we add comments with motivation, or references,
-or blog posts, or bug reports. See the first line in this example:
+what the code does. More often we add comments with motivation, reference URLs,
+or bug report numbers:
 
 ```ruby
-# From the Three Dog Night song: "Joy to the World (Jeremiah was a Bullfrog)"
+# From the Three Dog Night song: "Joy to the World (Jeremiah Was a Bullfrog)"
 puts "Joy to the world"
 puts "All the boys and girls"
 puts "Joy to the fishes in the deep blue sea"
@@ -134,7 +134,7 @@ the store."
 ```
 
 It's common for developers to test two code paths (in effect, doing a selection
-statement's work by-hand!) by "commenting-out" and "commenting-back-in" code.
+statement's work manually!) by "commenting-out" and "commenting-back-in" code.
 
 ## Conclusion
 

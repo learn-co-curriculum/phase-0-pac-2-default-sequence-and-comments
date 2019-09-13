@@ -30,7 +30,7 @@ through the process of getting a code environment together.
 Be sure to "play along" by keying in this code into your file and running
 it. We need to build comfort with working along with the lessons.
 
-## ![Sequence Glyph](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_mini.png) Recognize the Comment Character
+## ![Sequence Glyph](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_midi.png) Recognize the Comment Character
 
 We can exclude a line from the **default sequence** by starting the line with
 the comment character: `#`. After Ruby sees a `#`, it will ignore from the `#`
@@ -46,7 +46,7 @@ Be careful! A comment placed in the middle of an expression will confuse Ruby.
 > with a comment character. That means what's after `#` is ignored. That's why
 > it's used as an "in-code" documentation convention.
 
-## ![Sequence Glyph](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_mini.png) Add a Comment to Code
+## ![Sequence Glyph](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_midi.png) Add a Comment to Code
 
 Comments are **primarily** used to provide references or explanations about
 what's going on in code.
@@ -70,7 +70,7 @@ puts "Joy to the fishes in the deep blue sea"
 puts "Joy to you and me"
 ```
 
-## ![Sequence Glyph](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_mini.png) Comment-Out code
+## ![Sequence Glyph](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_midi.png) Comment-Out code
 
 Another way to use comments is to "comment-out" code, to "hide" or "mute" buggy
 or unused code from the **default sequence**.

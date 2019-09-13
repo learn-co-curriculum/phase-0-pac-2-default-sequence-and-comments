@@ -38,10 +38,7 @@ to the next line.
 
 Be careful! A comment placed in the middle of an expression will confuse Ruby.
 
-```ruby
-# Don't do the next line: <== A legitimate comment, "#" at beginning, rest of line ignored
-puts ( 1 #+ 1)
-```
+![Incorrectly commented line](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Image_97_%20ImproperCommentLIne.png)
 
 > **A-HA! Moment**. The "return value" documentation shorthand `#=>` starts
 > with a comment character. That means what's after `#` is ignored. That's why

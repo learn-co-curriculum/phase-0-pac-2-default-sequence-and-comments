@@ -36,6 +36,8 @@ We can exclude a line from the **default sequence** by starting the line with
 the comment character: `#`. After Ruby sees a `#`, it will ignore from the `#`
 to the next line.
 
+![Correctedly commented line](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Image_96_%20CommentOutLineofCode.png)
+
 Be careful! A comment placed in the middle of an expression will confuse Ruby.
 
 ![Incorrectly commented line](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Image_97_%20ImproperCommentLIne.png)

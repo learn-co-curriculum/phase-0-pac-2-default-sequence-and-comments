@@ -4,7 +4,7 @@
 
 * Recognize the comment character
 * Add a comment to code
-* Comment-Out code
+* 'Comment out' code
 
 ## Introduction
 
@@ -74,9 +74,9 @@ puts "Joy to you and me"
 > with a comment character. That means what's after `#` is ignored. That's why
 > it's used as an "in-code" documentation convention.
 
-## Comment-Out code
+## Comment Out code
 
-Another way to use comments is to "comment-out" code, to "hide" or "mute" buggy
+Another way to use comments is to "comment out" code, to "hide" or "mute" buggy
 or unused code from the **default sequence**.
 
 ```ruby
@@ -141,7 +141,7 @@ the store."
 ```
 
 It's common for developers to test two code paths (in effect, doing a selection
-statement's work by-hand!) by "commenting-out" and "commenting-back-in" code.
+statement's work by hand!) by "commenting out" and "commenting back in" code.
 
 ## Conclusion
 

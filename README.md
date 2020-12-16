@@ -1,92 +1,96 @@
-# Programming as Conversation 2: Default Sequence and Comments
+# Default Sequence and Comments
 
 ## Learning Goals
 
-* Recognize the comment character
+* Recognize the comment marker
 * Add a comment to code
 * 'Comment out' code
 
 ## Introduction
 
-As said in our introduction:
+As said in the introduction to this section:
 
-> The sequence statement isn't so much a statement, as an assumption. Ruby, by
-> default, will read our code according to the rules of a **default sequence**:
-> "every line, top to bottom, left to right as ruled by order of operations."
+> JavaScript by default will read our code according to the rules of a **default sequence** or **default flow**: "every line, top to bottom, left to right as ruled by order of operations."
 
-Using SELECTION statements we'll make Ruby "skip" over code if some Boolean
-_evaluation_ is (or is not) `true`. Using REPETITION statements, we'll make
-Ruby "stay put" on one line and do it over and over until some Boolean
-_evaluation_ is (or is not) `true`. The only way to make Ruby "not see" a line
-without a Boolean _evaluation_ at play is to "hide" it from Ruby using a
+Using SELECTION statements we can make JavaScript "skip" over code if some Boolean
+_evaluation_ is (or is not) `true`. Using REPETITION statements, we can make
+JavaScript "stay put" on one line and do it over and over until some Boolean
+_evaluation_ is (or is not) `true`. The only way to make JavaScript "not see" a line
+without a Boolean _evaluation_ at play is to "hide" it from JavaScript using a
 _comment_.
 
-Since this is our first lesson using the Learn In-Browser IDE, we'll step
-through the process of getting a code environment together.
+Be sure to "play along" with the examples below by keying in this code into
+[repl.it](https://repl.it/languages/javascript). We need to build comfort with
+working along with the lessons.
 
-1. Create a new file in the Learn In-Browser IDE. We can call this file
-   `learning-comments.rb`
-2. Type in (better than copy-paste!) the code samples
-3. Run the Ruby code with `ruby learning-comments.rb`
-4. Edit the file and put in new examples as needed
-
-Be sure to "play along" by keying in this code into your own file and running
-it. We need to build comfort with working along with the lessons.
-
-## Recognize the Comment Character
+## Recognize the Comment Marker
 
 We can exclude a line from the **default sequence** by starting the line with
-the comment character: `#`. After Ruby sees a `#`, it will ignore from the `#`
-to the next line.
+the comment marker: `//`. After JavaScript sees a `//`, it will ignore from the
+`//` to the next line.
 
-Be careful! A comment placed in the middle of an expression will confuse Ruby.
+Be careful! A comment placed in the middle of an expression can confuse JavaScript.
 
-```ruby
-# Don't do this:
-puts ( 1 #+ 1)
+```js
+// Don't do this:
+const sum = ( 1 //+ 1);
 ```
+
+As a rule of thumb, try to comment out whole lines only (i.e., place the comment
+marker at the beginning of the line). As you get more comfortable with
+JavaScript, you might find clever ways to use comments, but best keep things
+simple for now.
 
 ## Add a Comment to Code
 
 Comments are **primarily** used to provide references or explanations about
 what's going on in code.
 
-```ruby
-# Perform a constant expression evaluation
-3
-# Assign constant 3 to bare-word variable triangle_sides
-`triangle_sides`
+```js
+// Perform a constant expression evaluation
+3;
+// Assign constant 3 to variable triangleSides
+const triangleSides = 3;
 ```
 
 Comments such as these are not particularly helpful. They're just restating
 what the code does. More often we add comments with motivation, or references,
-or blog posts, or bug reports. See the first line in this example:
+or blog posts, or bug reports:
 
-```ruby
-# From the Three Dog Night song: "Joy to the World (Jeremiah was a Bullfrog)"
-puts "Joy to the world"
-puts "All the boys and girls"
-puts "Joy to the fishes in the deep blue sea"
-puts "Joy to you and me"
+```js
+// From the Three Dog Night song: "Joy to the World (Jeremiah was a Bullfrog)"
+const lineOne = "Joy to the world";
+const lineTwo = "All the boys and girls";
+const lineThree = "Joy to the fishes in the deep blue sea";
+const lineFour = "Joy to you and me";
+
+// The '\n' inserts a new line into the string
+const chorus = `${lineOne}\n${lineTwo}\n${lineThree}\n${lineFour}`;
+
+chorus;
 ```
 
-> **A-HA! Moment**. The "return value" documentation shorthand `#=>` starts
-> with a comment character. That means what's after `#` is ignored. That's why
-> it's used as an "in-code" documentation convention.
+> **A-HA! Moment**. Recall that the "return value" documentation shorthand `//=>` starts with a comment marker. This indicates that what's after `//` is not part of the code itself. That's why it's used as an "in-code" documentation convention.
 
 ## Comment Out code
 
 Another way to use comments is to "comment out" code, to "hide" or "mute" buggy
 or unused code from the **default sequence**.
 
-```ruby
-puts "Joy to the world"
-puts "All the boys and girls"
-puts "Joy to the fishes in the deep blue sea"
-puts "Joy to you and me"
+With our current code:
+
+```js
+const lineOne = "Joy to the world";
+const lineTwo = "All the boys and girls";
+const lineThree = "Joy to the fishes in the deep blue sea";
+const lineFour = "Joy to you and me";
+
+const chorus = `${lineOne}\n${lineTwo}\n${lineThree}\n${lineFour}`;
+
+chorus;
 ```
 
-**Default sequence** satisfies our expectations by printing out:
+**Default sequence** satisfies our expectations by returning:
 
 ```text
 Joy to the world
@@ -95,16 +99,25 @@ Joy to the fishes in the deep blue sea
 Joy to you and me
 ```
 
-Now let's "comment out" the third line.
+Now let's "comment out" `lineThree`. We'll also need to modify `chorus`
+accordingly. (If you aren't sure why, try **just** commenting out `lineThree` in
+your REPL and see what happens when you run the code.) We'll comment out the
+current version of `chorus` to save it and modify a copy:
 
-```ruby
-puts "Joy to the world"
-puts "All the boys and girls"
-# puts "Joy to the fishes in the deep blue sea"
-puts "Joy to you and me"
+```js
+const lineOne = "Joy to the world";
+const lineTwo = "All the boys and girls";
+//const lineThree = "Joy to the fishes in the deep blue sea";
+const lineFour = "Joy to you and me";
+
+// const chorus = `${lineOne}\n${lineTwo}\n${lineThree}\n${lineFour}`;
+const chorus = `${lineOne}\n${lineTwo}\n${lineFour}`;
+
+chorus;
+
 ```
 
-If we run this code, it produces:
+If we run this code, it returns:
 
 ```text
 Joy to the world
@@ -112,32 +125,23 @@ All the boys and girls
 Joy to you and me
 ```
 
-As a rule of thumb, try to comment out from the beginning of the line to the
-end. As you get more comfortable with Ruby, you might find clever ways to use
-comments, but best keep things simple now.
+If we want to go back to the original version, we simply "comment back in"
+`lineThree` and the original `chorus` variable, and comment out or delete the
+modified version of `chorus`.
 
-Here's a more complex example of us commenting out code.
+If we want to comment out _multiple_ lines, we can either place the comment
+marker at the beginning of each line, _or_ we can wrap the lines with `/*` and
+`*/`:
 
-```ruby
-# name = "Byron"
-name = "Luca"
+```js
+/*
+const lineOne = "Joy to the world";
+const lineTwo = "All the boys and girls";
+const lineThree = "Joy to the fishes in the deep blue sea"; 
+*/
+const lineFour = "Joy to you and me";
 
-puts "We're sorry, but per health inspector's rules, #{name} is not allowed in
-the store."
-
-#=> We're sorry, but per health inspector's rules, Luca is not allowed in the store.
-```
-
-We can swap the comments:
-
-```ruby
-name = "Byron"
-# name = "Luca"
-
-puts "We're sorry, but per health inspector's rules, #{name} is not allowed in
-the store."
-
-#=> We're sorry, but per health inspector's rules, Byron is not allowed in the store.
+lineFour;
 ```
 
 It's common for developers to test two code paths (in effect, doing a selection
@@ -145,7 +149,8 @@ statement's work by hand!) by "commenting out" and "commenting back in" code.
 
 ## Conclusion
 
-The **default sequence** is how Ruby reads and executes each of the statements
-and commands in a Ruby file. To "hide" a line of code from being seen by Ruby,
-start the line with a `#`. We use comments to provide lightweight documentation
-or to hide code while we debug or test it.
+The **default sequence** is how JavaScript reads and executes each of the
+statements and commands in JavaScript code. To "hide" a line of code from being
+seen by the JavaScript engine, start the line with the comment marker `//`. We
+use comments to provide lightweight documentation or to hide code while we debug
+or test it.

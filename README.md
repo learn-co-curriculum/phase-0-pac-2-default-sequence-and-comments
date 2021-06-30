@@ -37,9 +37,9 @@ const sum = ( 1 //+ 1);
 ```
 
 As a rule of thumb, try to comment out whole lines only (i.e., place the comment
-marker at the beginning of the line). As you get more comfortable with
-JavaScript, you might find clever ways to use comments, but best keep things
-simple for now.
+marker at the beginning of the line) to reduce the chances of breaking your code.
+While you _can_ place comments within a line of code, it's best to keep things simple
+for now.
 
 ## Add a Comment to Code
 

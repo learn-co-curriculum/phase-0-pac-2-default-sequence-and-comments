@@ -10,7 +10,9 @@
 
 As said in the introduction to this section:
 
-> JavaScript by default will read our code according to the rules of a **default sequence** or **default flow**: "every line, top to bottom, left to right as ruled by order of operations."
+> JavaScript by default will read our code according to the rules of a **default
+> sequence** or **default flow**: "every line, top to bottom, left to right as
+> ruled by order of operations."
 
 Using SELECTION statements we can make JavaScript "skip" over code if some Boolean
 _evaluation_ is (or is not) `true`. Using REPETITION statements, we can make
@@ -70,7 +72,10 @@ const chorus = `${lineOne}\n${lineTwo}\n${lineThree}\n${lineFour}`;
 chorus;
 ```
 
-> **A-HA! Moment**. Recall that the "return value" documentation shorthand `//=>` starts with a comment marker. This indicates that what's after `//` is not part of the code itself. That's why it's used as an "in-code" documentation convention.
+> **A-HA! Moment**. Recall that the "return value" documentation shorthand
+> `//=>` starts with a comment marker. This indicates that what's after `//` is
+> not part of the code itself. That's why it's used as an "in-code"
+> documentation convention.
 
 ## Comment Out code
 

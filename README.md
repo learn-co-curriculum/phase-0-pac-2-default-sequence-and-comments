@@ -15,18 +15,19 @@ As said in the introduction to this section:
 > sequence** or **default flow**: "every line, top to bottom, left to right as
 > ruled by order of operations."
 
-Using SELECTION statements we can make JavaScript "skip" over code if some Boolean
-_evaluation_ is (or is not) `true`. Using REPETITION statements, we can make
-JavaScript "stay put" on one line and do it over and over until some Boolean
-_evaluation_ is (or is not) `true`. The only way to make JavaScript "not see" a line
-without a Boolean _evaluation_ at play is to "hide" it from JavaScript using a
-_comment_.
+Using SELECTION statements we can make JavaScript "skip" over code if some
+Boolean _evaluation_ is (or is not) `true`. Using REPETITION statements, we can
+make JavaScript "stay put" on one line and do it over and over until some
+Boolean _evaluation_ is (or is not) `true`. The only way to make JavaScript "not
+see" a line without a Boolean _evaluation_ at play is to "hide" it from
+JavaScript using a _comment_. We'll learn how to do this a bit later in the
+lesson but first, let's expand our repl.it skills a bit.
 
 ## Using the Code Window in repl.it
 
-In this lesson, we'll learn how to expand our use of [repl.it][] to make use of
-the code window in addition to the console window. Go ahead and open [repl.it][]
-now.
+So far, we've been using the console window in [repl.it][] and ignoring the code
+window. Now we're going to learn how we can use the code window to make it
+easier to write, test, and experiment with code. Go ahead and open [repl.it][].
 
 When you open it, you'll see a single line of code in the window on the left
 side:
@@ -37,14 +38,13 @@ console.log('Hello, world!')
 
 If you click the "Run" button, you will see the message "Hello, world!" written
 out in the console window. You will learn more about using `console.log` a bit
-later in this section. For our purposes now, just know that `console.log` is how
-we can get the repl to print out the results of code that is entered in the code
-window.
+later in this section. For now, just know that `console.log` is how we can get
+the REPL to print out the results of code that is entered in the code window.
 
-When you press run, the repl _evaluates_ the expression inside the parentheses,
-and then prints that value out to the console. This gives us another option for
-checking the value of variables and other expressions, in addition to running
-code directly in the console.
+When you pressed run, the REPL _evaluated_ the expression inside the
+parentheses, and then printed that value out to the console. This gives us
+another option for checking the value of variables and other expressions, in
+addition to running code directly in the console.
 
 For example, try entering the following into the code window, then press "Run".
 
@@ -56,7 +56,8 @@ console.log(sum);
 
 You should see the value `2` written to the console.
 
-What do you think will happen if you type this into the code window and run it:
+What do you think will happen if you type the following into the code window and
+run it?
 
 ```js
 console.log(5 * 5);
@@ -73,13 +74,13 @@ difference = 10 - 5;
 ```
 
 Although it doesn't appear that anything happens — nothing is printed out in the
-console — JavaScript has evaluated the value and it is now stored in the
-variable `difference`. Now try typing `difference;` in the _console window_ then
-hit enter.
+console — JavaScript has evaluated the value of the arithmetic expression and
+that value is now stored in the variable `difference`. Now try typing
+`difference;` in the _console window_ then hit enter.
 
 Often, it's inconvenient to type or copy/paste code into the console — if you're
 working with a large block of code, for example. In addition, putting code in
-the code window makes it easier to correct errors and experiment with the code.
+the code window makes it easier to correct errors and try different things.
 
 As you work through the curriculum, we encourage you to use [repl.it][] to try out
 code samples from the lessons and to experiment with your own examples. Using the
@@ -128,9 +129,13 @@ const lineFour = "Joy to you and me";
 
 // The '\n' inserts a new line into the string
 const chorus = `${lineOne}\n${lineTwo}\n${lineThree}\n${lineFour}`;
-
-chorus;
 ```
+
+Go ahead and enter the code above into the repl.it code window and check the
+value of `chorus`. Try it using both of the methods we've learned: adding a
+`console.log` of the variable in the code window, and directly checking its
+value in the console. Remember that, before you can check the value of a
+variable in the console, you need to _Run_ the code.
 
 > **A-HA! Moment**. Recall that the "return value" documentation shorthand
 > `//=>` starts with a comment marker. This indicates that what's after `//` is
@@ -151,11 +156,10 @@ const lineThree = "Joy to the fishes in the deep blue sea";
 const lineFour = "Joy to you and me";
 
 const chorus = `${lineOne}\n${lineTwo}\n${lineThree}\n${lineFour}`;
-
-chorus;
 ```
 
-**Default sequence** satisfies our expectations by returning:
+**Default sequence** satisfies our expectations if we check the value of
+`chorus`:
 
 ```text
 Joy to the world
@@ -177,12 +181,9 @@ const lineFour = "Joy to you and me";
 
 // const chorus = `${lineOne}\n${lineTwo}\n${lineThree}\n${lineFour}`;
 const chorus = `${lineOne}\n${lineTwo}\n${lineFour}`;
-
-chorus;
-
 ```
 
-If we run this code, it returns:
+Now, if we run the code and check the value of `chorus`, it returns:
 
 ```text
 Joy to the world
@@ -206,7 +207,7 @@ const lineThree = "Joy to the fishes in the deep blue sea";
 */
 const lineFour = "Joy to you and me";
 
-lineFour;
+lineFour; // => "Joy to you and me"
 ```
 
 It's common for developers to test two code paths (in effect, doing a selection

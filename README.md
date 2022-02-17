@@ -14,16 +14,15 @@ As said in the introduction to this section:
 > sequence** or **default flow**: "every line, top to bottom, left to right as
 > ruled by order of operations."
 
-Using SELECTION statements we can make JavaScript "skip" over code if some Boolean
-_evaluation_ is (or is not) `true`. Using REPETITION statements, we can make
-JavaScript "stay put" on one line and do it over and over until some Boolean
-_evaluation_ is (or is not) `true`. The only way to make JavaScript "not see" a line
-without a Boolean _evaluation_ at play is to "hide" it from JavaScript using a
-_comment_.
+Using SELECTION statements we can make JavaScript "skip" over code if some
+Boolean _evaluation_ is (or is not) `true`. Using REPETITION statements, we can
+make JavaScript "stay put" on one line and do it over and over until some
+Boolean _evaluation_ is (or is not) `true`. The only way to make JavaScript "not
+see" a line without a Boolean _evaluation_ at play is to "hide" it from
+JavaScript using a _comment_.
 
-Be sure to "play along" with the examples below by keying in this code into
-[repl.it](https://repl.it/languages/javascript). We need to build comfort with
-working along with the lessons.
+Be sure to "play along" with the examples below in [replit][]. We need to build
+comfort with working along with the lessons.
 
 ## Recognize the Comment Marker
 
@@ -68,9 +67,18 @@ const lineFour = "Joy to you and me";
 
 // The '\n' inserts a new line into the string
 const chorus = `${lineOne}\n${lineTwo}\n${lineThree}\n${lineFour}`;
-
-chorus;
 ```
+
+If you enter the code above into the REPL's code window and click "Run", you'll
+see that nothing happens — which is good! JavaScript has recognized the
+commented-out lines as comments and ignored them. If you try "un-commenting out"
+one of them and rerunning the code, you'll get a `SyntaxError`.
+
+So far, so good, but we still haven't verified that our code is doing what we
+want it to do. Go ahead and check the value of `chorus`. Try it using both of
+the methods we've learned: adding a `console.log` of the variable in the code
+window, and directly checking its value in the console. Remember that, with
+either option, you need to _Run_ the code.
 
 > **A-HA! Moment**. Recall that the "return value" documentation shorthand
 > `//=>` starts with a comment marker. This indicates that what's after `//` is
@@ -91,11 +99,10 @@ const lineThree = "Joy to the fishes in the deep blue sea";
 const lineFour = "Joy to you and me";
 
 const chorus = `${lineOne}\n${lineTwo}\n${lineThree}\n${lineFour}`;
-
-chorus;
 ```
 
-**Default sequence** satisfies our expectations by returning:
+**Default sequence** satisfies our expectations if we check the value of
+`chorus`:
 
 ```text
 Joy to the world
@@ -117,12 +124,9 @@ const lineFour = "Joy to you and me";
 
 // const chorus = `${lineOne}\n${lineTwo}\n${lineThree}\n${lineFour}`;
 const chorus = `${lineOne}\n${lineTwo}\n${lineFour}`;
-
-chorus;
-
 ```
 
-If we run this code, it returns:
+Now, if we run the code and check the value of `chorus`, it returns:
 
 ```text
 Joy to the world
@@ -146,7 +150,7 @@ const lineThree = "Joy to the fishes in the deep blue sea";
 */
 const lineFour = "Joy to you and me";
 
-lineFour;
+lineFour; // => "Joy to you and me"
 ```
 
 It's common for developers to test two code paths (in effect, doing a selection
@@ -159,3 +163,5 @@ statements and commands in JavaScript code. To "hide" a line of code from being
 seen by the JavaScript engine, start the line with the comment marker `//`. We
 use comments to provide lightweight documentation or to hide code while we debug
 or test it.
+
+[replit]: https://replit.com/languages/javascript

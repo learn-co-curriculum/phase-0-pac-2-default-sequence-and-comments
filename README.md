@@ -76,7 +76,7 @@ one of them and rerunning the code, you'll get a `SyntaxError`.
 
 So far, so good, but we still haven't verified that our code is doing what we
 want it to do. Go ahead and check the value of `chorus`. Try it using both of
-the methods we've learned: adding a `console.log` of the variable in the code
+the methods we've learned: adding a `console.log()` of the variable in the code
 window, and directly checking its value in the console. Remember that, with
 either option, you need to _Run_ the code.
 
